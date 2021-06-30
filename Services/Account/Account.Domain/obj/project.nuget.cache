@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "t3z16tYEc6YI2w6iexAHkMUN/XOuerwjfvr3cRdYK8MGeAq1KZyNt48v01N0VzrxMkjj/lKEk4tueu12IwW8Hw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Administrador\\source\\repos\\Easy.Automation\\src\\Services\\Account\\Account.Domain\\Account.Domain.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Administrador\\.nuget\\packages\\mediatr\\9.0.0\\mediatr.9.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -1,0 +1,59 @@
+version: '3.4'
+
+services:
+  pgadmin:
+    container_name: pgadmin
+    environment:
+        - PGADMIN_DEFAULT_EMAIL=ribeiro12369@hotmail.com
+        - PGADMIN_DEFAULT_PASSWORD=t5dGUMO3
+    restart: always
+    ports:
+        - "15432:80"
+
+  account.db:
+    container_name: account.db
+    environment:
+        - POSTGRES_USER=postgres
+        - POSTGRES_PASSWORD=t5dGUMO3
+        - POSTGRES_DB=AccountDb
+    restart: always
+    ports:
+        - "5432:5432"
+    volumes:
+        - accountbd:/var/lib/postgresql/data
+
+  account.api:
+    container_name: account.api 
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - "ConnectionStrings:DefaultConnection=Server=account.db;Port=5432;Database=AccountDb;User Id=postgres;Password=t5dGUMO3;Pooling=false;Timeout=300;CommandTimeout=300"
+    depends_on:
+    - account.db
+    ports:
+      - "8001:80"
+    volumes:
+      - ${APPDATA}/Microsoft/UserSecrets:/root/.microsoft/usersecrets:ro
+      - ${APPDATA}/ASP.NET/Https:/root/.aspnet/https:ro
+  
+  node.db:
+    container_name: node.db
+    environment:
+        - POSTGRES_USER=postgres
+        - POSTGRES_PASSWORD=t5dGUMO3
+        - POSTGRES_DB=NodeDb
+    restart: always
+    ports:
+        - "5433:5432"
+    volumes:
+        - node_postgres_data:/var/lib/postgresql/data
+
+  node.api:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=https://+:443;http://+:80
+    depends_on:
+        - node.db 
+    ports:
+      - "8002:80"
+    volumes:
+      - ${APPDATA}/ASP.NET/Https:/root/.aspnet/https:ro

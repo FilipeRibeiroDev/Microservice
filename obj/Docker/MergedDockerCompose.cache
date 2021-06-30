@@ -1,0 +1,78 @@
+services:
+  account.api:
+    build:
+      context: C:\Users\Administrador\source\repos\Easy.Automation\src
+      dockerfile: Services/Account/Account.API/Dockerfile
+    container_name: account.api
+    depends_on:
+      account.db:
+        condition: service_started
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_URLS: https://+:443;http://+:80
+    image: accountapi
+    ports:
+    - published: 8002
+      target: 80
+    - target: 443
+    volumes:
+    - C:\Users\Administrador\AppData\Roaming\ASP.NET\Https:/root/.aspnet/https:ro
+    - C:\Users\Administrador\AppData\Roaming\Microsoft\UserSecrets:/root/.microsoft/usersecrets:ro
+  account.db:
+    container_name: account.db
+    environment:
+      POSTGRES_DB: AccountDb
+      POSTGRES_PASSWORD: t5dGUMO3
+      POSTGRES_USER: postgres
+    image: postgres
+    ports:
+    - published: 5432
+      target: 5432
+    restart: always
+    volumes:
+    - account_postgres_data:/var/lib/postgresql/data:rw
+  node.api:
+    build:
+      context: C:\Users\Administrador\source\repos\Easy.Automation\src
+      dockerfile: Services/Node/Node.API/Dockerfile
+    depends_on:
+      node.db:
+        condition: service_started
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_URLS: https://+:443;http://+:80
+    image: nodeapi
+    ports:
+    - published: 8003
+      target: 80
+    - target: 443
+    volumes:
+    - C:\Users\Administrador\AppData\Roaming\ASP.NET\Https:/root/.aspnet/https:ro
+  node.db:
+    container_name: node.db
+    environment:
+      POSTGRES_DB: NodeDb
+      POSTGRES_PASSWORD: t5dGUMO3
+      POSTGRES_USER: postgres
+    image: postgres
+    ports:
+    - published: 5433
+      target: 5432
+    restart: always
+    volumes:
+    - account_postgres_data:/var/lib/postgresql/data:rw
+  pgadmin:
+    container_name: pgadmin
+    environment:
+      PGADMIN_DEFAULT_EMAIL: ribeiro12369@hotmail.com
+      PGADMIN_DEFAULT_PASSWORD: t5dGUMO3
+    image: dpage/pgadmin4
+    ports:
+    - published: 15432
+      target: 80
+    restart: always
+version: '3.4'
+volumes:
+  account_postgres_data: {}
+  node_postgres_data: {}
+  pgadmin_data: {}

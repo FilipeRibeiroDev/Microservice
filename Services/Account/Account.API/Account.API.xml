@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Account.API</name>
+    </assembly>
+    <members>
+        <member name="M:Account.API.Controllers.UserController.Get">
+            <summary>
+            Get user
+            </summary>
+            <returns>List users</returns>
+        </member>
+        <member name="M:Account.API.Controllers.UserController.Get(System.String)">
+            <summary>
+            Get one user
+            </summary>
+            <param name="id"></param>
+            <returns>User</returns>
+        </member>
+        <member name="M:Account.API.Controllers.UserController.Post(Account.API.Application.Commands.CreateUserCommand)">
+            <summary>
+            Add user
+            </summary>
+            <param name="createUserCommand"></param>
+            <returns>User</returns>
+        </member>
+        <member name="M:Account.API.Controllers.UserController.Put(Account.API.Application.Commands.UpdateUserCommand,System.String)">
+            <summary>
+            Put user
+            </summary>
+            <param name="updateUserCommand"></param>
+            <param name="identityUser"></param>
+            <returns>User</returns>
+        </member>
+        <member name="M:Account.API.Controllers.UserController.Delete(System.String)">
+            <summary>
+            Remove User
+            </summary>
+            <param name="identityUser"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

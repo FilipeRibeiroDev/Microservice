@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "GT0WFwB4oZcj38791XRXLZ/8Rp1huZ9XeYc5Mip6LFEQtgJnFmtlycqe9Ojq6ngMJQ+DGqsPQHGjIwcOWKOR0w==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Administrador\\source\\repos\\Easy.Automation\\src\\Utilities\\SeedWork\\SeedWork\\SeedWork.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Administrador\\.nuget\\packages\\mediatr\\9.0.0\\mediatr.9.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

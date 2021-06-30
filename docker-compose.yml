@@ -1,0 +1,28 @@
+version: '3.4'
+
+services:
+  pgadmin: 
+    image: dpage/pgadmin4
+  
+  account.db:
+    image: postgres
+  
+  node.db:
+    image: postgres
+  
+  account.api:
+    image: ribeiro12369/accountapi
+    build:
+      context: .
+      dockerfile: Services/Account/Account.API/Dockerfile
+
+  node.api:
+    image: ribeiro12369/nodeapi
+    build:
+      context: .
+      dockerfile: Services/Node/Node.API/Dockerfile
+
+volumes:
+    accountbd:
+    node_postgres_data:
+    pgadmin_data:

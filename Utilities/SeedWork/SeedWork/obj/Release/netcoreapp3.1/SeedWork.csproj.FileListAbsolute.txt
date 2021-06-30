@@ -1,0 +1,9 @@
+C:\Users\Administrador\source\repos\Easy.Automation\src\Utilities\SeedWork\SeedWork\bin\Release\netcoreapp3.1\SeedWork.deps.json
+C:\Users\Administrador\source\repos\Easy.Automation\src\Utilities\SeedWork\SeedWork\bin\Release\netcoreapp3.1\SeedWork.dll
+C:\Users\Administrador\source\repos\Easy.Automation\src\Utilities\SeedWork\SeedWork\bin\Release\netcoreapp3.1\SeedWork.pdb
+C:\Users\Administrador\source\repos\Easy.Automation\src\Utilities\SeedWork\SeedWork\obj\Release\netcoreapp3.1\SeedWork.csprojAssemblyReference.cache
+C:\Users\Administrador\source\repos\Easy.Automation\src\Utilities\SeedWork\SeedWork\obj\Release\netcoreapp3.1\SeedWork.AssemblyInfoInputs.cache
+C:\Users\Administrador\source\repos\Easy.Automation\src\Utilities\SeedWork\SeedWork\obj\Release\netcoreapp3.1\SeedWork.AssemblyInfo.cs
+C:\Users\Administrador\source\repos\Easy.Automation\src\Utilities\SeedWork\SeedWork\obj\Release\netcoreapp3.1\SeedWork.csproj.CoreCompileInputs.cache
+C:\Users\Administrador\source\repos\Easy.Automation\src\Utilities\SeedWork\SeedWork\obj\Release\netcoreapp3.1\SeedWork.dll
+C:\Users\Administrador\source\repos\Easy.Automation\src\Utilities\SeedWork\SeedWork\obj\Release\netcoreapp3.1\SeedWork.pdb

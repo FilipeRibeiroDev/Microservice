@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MediatR" Version="9.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="SeedWork">
+      <HintPath>..\..\..\Utilities\SeedWork\SeedWork\bin\Release\netcoreapp3.1\SeedWork.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>
